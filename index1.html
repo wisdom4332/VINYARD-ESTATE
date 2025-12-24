@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                🏠 PrimeHomes
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="indexp.html" role="button" >
+                            Properties
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="properties-sale.html">For Sale</a></li>
+                            <li><a class="dropdown-item" href="properties-rent.html">For Rent</a></li>
+                            <li><a class="dropdown-item" href="luxury.html">Luxury Homes</a></li>
+                        </ul>
+                    </li> -->
+                    
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Properties</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="contact.html">Book Inspection</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <section class="hero-section d-flex justify-content-center align-items-center">
+        <div class="container text-black h-100">
+            <div class="row h-100 text-center">
+                <div class="col-md-12">
+                    <h1 class="display-3 fw-bold text-white">
+                        Find Your Dream Home in Nigeria
+                    </h1>
+                    <p class="lead mt-3 text-white">
+                        Buy, sell, and rent properties with trusted real estate professionals.
+                    </p>
+
+                    <div class="mt-4">
+                        <a href="properties-sale.html" class="btn btn-primary btn-lg me-2">
+                            Buy Property
+                        </a>
+                        <a href="properties-rent.html" class="btn btn-primary light btn-lg">
+                            Rent Property
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="property-search mt-5">
+  <form class="row g-2 justify-content-center">
+    
+    <!-- Property Type -->
+    <div class="col-md-3">
+      <select class="form-select">
+        <option selected>Property Type</option>
+        <option>House</option>
+        <option>Apartment</option>
+        <option>Land</option>
+        <option>Commercial</option>
+      </select>
+    </div>
+
+    <!-- Location -->
+    <div class="col-md-3">
+      <input type="text" class="form-control" placeholder="Location">
+    </div>
+
+    <!-- Price Range -->
+    <div class="col-md-3">
+      <select class="form-select">
+        <option selected>Price Range</option>
+        <option>₦1M - ₦5M</option>
+        <option>₦5M - ₦10M</option>
+        <option>₦10M - ₦50M</option>
+        <option>₦50M+</option>
+      </select>
+    </div>
+
+    <!-- Search Button -->
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-warning w-100"> <a href="index.html">Search</a></button>
+    </div>
+
+  </form>
+</div>
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

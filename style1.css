@@ -1,0 +1,182 @@
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  url('./image/WhatsAp1.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-section .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+.property-search {
+  background: rgba(255, 255, 255, 0.1); /* slightly transparent */
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* nice frosted effect */
+}
+
+.property-search .form-control,
+.property-search .form-select {
+  height: 50px;
+  border-radius: 8px;
+}
+
+
+/* propery-side */
+.properties h2 {
+  color: #333;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.card-text {
+  color: #555;
+}
+
+
+
+
+.property-detail h2 {
+  margin-bottom: 10px;
+}
+
+.property-detail p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.property-detail img {
+  height: 300px;
+  object-fit: cover;
+}
+
+iframe {
+  border-radius: 20px;
+}
+
+
+/* ABOUT HERO */
+.about-hero {
+  height: 70vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("./image/c6.jpg") center/cover no-repeat;
+}
+
+/* FOOTER BACKGROUND */
+.footer-bg {
+  background: url("./image/e5d.jpg") center/cover no-repeat;
+}
+
+.footer-overlay {
+  background: rgba(0,0,0,0.75);
+}
+
+/* CONTACT HERO */
+.contact-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url("./image/18.jpg") center/cover no-repeat;
+}
+/* GET IN TOUCH BOX */
+.get-in-touch-box {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* CONTACT FORM */
+.contact-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* INPUTS */
+.contact-form .form-control {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.contact-form .form-control:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.25);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  background: #25d366;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+.services-hero {
+  height: 65vh;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+              url("../images/services-bg.jpg") center/cover no-repeat;
+}
+
+.service-box {
+  background: #ffffff;
+  border-left: 4px solid #198754;
+  border-radius: 8px;
+}
+.testimonials-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+              url("../images/testimonials-bg.jpg") center/cover no-repeat;
+}
+
+.testimonial-card {
+  border-radius: 10px;
+  background: #ffffff;
+}
+.properties-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+              url("../images/properties-bg.jpg") center/cover no-repeat;
+}
+
+.property-card img {
+  height: 220px;
+  object-fit: cover;
+}
+.carousel-inner img {
+  height: 450px;
+  object-fit: cover;
+} 
+video {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+
+
+

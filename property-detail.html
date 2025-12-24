@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <section class="py-5">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- IMAGE -->
+                <div class="col-lg-6">
+                    <img id="propertyImage" class="img-fluid rounded shadow" alt="Property image">
+                </div>
+
+                <!-- DETAILS -->
+                <div class="col-lg-6">
+
+                    <h2 id="propertyTitle" class="fw-bold mb-2"></h2>
+                    <p id="propertyLocation" class="text-muted"></p>
+
+                    <h4 id="propertyPrice" class="text-success fw-bold mb-3"></h4>
+
+                    <p id="propertyDescription"></p>
+                    <video id="propertyvideo" class="w-100 rounded shadow mt-4" controls></video>
+
+                    <a id="bookInspection" class="btn btn-primary btn-lg mt-3" href="#">
+                        Book Inspection
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const properties = {
+            lagos1: {
+                title: "Luxury Apartment in Lekki",
+                price: "₦120,000,000",
+                location: "Lekki Phase 1, Lagos",
+                description:
+                    "This luxury apartment is located in a secure and well-developed area of Lekki Phase 1. It features modern architecture, premium finishing, and excellent access to major roads and amenities.",
+                image: "image/lagos1.jpg",
+            },
+
+
+
+            abuja1: {
+                title: "5 Bedroom Duplex in Maitama",
+                price: "₦450,000,000",
+                location: "Maitama, Abuja",
+                description:
+                    "A spacious 5-bedroom duplex located in one of Abuja’s most prestigious neighborhoods. Ideal for luxury living and high-value investment.",
+                image: "image/abuja1.jpg"
+
+            },
+
+            smart: {
+                title: "Smart Bungalow in Owerri",
+                price: "₦45,000,000",
+                location: "Owerri, Imo State",
+                description:
+                    "A modern smart bungalow in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/smart.jpg"
+            },
+            inn: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/inn.jpg"
+            },
+            ll: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ll.jpg"
+            },
+            ii: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ii.jpg"
+            },
+            rr: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/rr.jpg"
+            },
+            gg: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/gg.jpg"
+            },
+            ss: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ss.jpg"
+            },
+            pp: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/pp.jpg"
+            },
+            aa: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/aa.jpg"
+            },
+            ww: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ww.jpg"
+            },
+            ee: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ee.jpg"
+            },
+            we: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/we.jpg"
+            },
+            qq: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/qq.jpg"
+            },
+            ma: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ma.jpg"
+            },
+            yt: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/yt.jpg"
+            },
+            re: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/re.jpg"
+
+            },
+            pa: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/pa.jpg"
+
+            },
+            hh: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/hh.jpg"
+
+            },
+            dd: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/dd.jpg"
+
+            },
+            eew: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/eew.jpg"
+
+            },
+            bbc: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/bbc.jpg"
+
+            },
+            ec: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ec.jpg"
+
+            },
+            d2d: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/d2d.jpg"
+
+            },
+            a6: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/a6.jpg"
+
+            },
+            f: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/f.jpg"
+
+            },
+            d7: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/d7.jpg"
+
+            },
+            bc: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/bc.jpg"
+
+            },
+            jj: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/jj.jpg"
+
+            },
+            ggg: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ggg.jpg"
+
+            },
+            cf: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/cf.jpg"
+
+            },
+            c8: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/c8.jpg"
+
+            },
+            ba: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ba.jpg"
+
+            },
+            ba: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ba.jpg"
+
+            },
+            a5: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/a5.jpg"
+
+            },
+            aq: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/aq.jpg"
+
+            },
+            bbcc: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/bbcc.jpg"
+
+            },
+            ff: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/ff.jpg"
+
+            },
+            q: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/q.jpg"
+
+            },
+            op: {
+                title: "Three bedroom appartment",
+                price: "₦1,000,000",
+                location: "Owerri, Imo State (For Rent)",
+                description:
+                    "A virgin three bedroom flats appartment's in a calm and secure environment. Perfect for families looking for comfort and affordability.",
+                image: "image/op.jpg"
+
+            },
+        };
+    </script>
+
+
+
+
+
+
+    <script>
+        const video =
+            document.createElement("video");
+        video.src = "video.mp4";
+        video.width = 500;
+        video.controls = true;
+        video.autoplay = false;
+        document.getElementById("videocontainer").appendChild(video);
+    </script>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const propertyId = params.get("id");
+
+        if (properties[propertyId]) {
+            document.getElementById("propertyTitle").innerText =
+                properties[propertyId].title;
+
+            document.getElementById("propertyPrice").innerText =
+                properties[propertyId].price;
+
+            document.getElementById("propertyLocation").innerText =
+                properties[propertyId].location;
+
+            document.getElementById("propertyDescription").innerText =
+                properties[propertyId].description;
+
+            document.getElementById("propertyImage").src =
+                properties[propertyId].image;
+
+            document.getElementById("bookInspection").href =
+                "contact.html?property=" + properties[propertyId].title;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="py-5 bg-light">
+    <div class="container text-center">
+
+        <h3 class="fw-bold mb-4">Property Video Tour</h3>
+
+        <video class="w-100 rounded shadow" controls preload="metadata" poster="images/property1.jpg">
+
+            <source src="videos/5BEDROOM_FULLY_DETACHED_DUPLEX_FOR_SALE._nel_2025_1.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+</section> -->
+
+<!-- <iframe src="https://assets.pinterest.com/ext/embed.html?id=29203097580914250" height="1167" width="600" frameborder="0"
+    scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=45880489950202925" height="1167" width="600" frameborder="0"
+    scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=21673641952102934" height="1167" width="600" frameborder="0"
+    scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=11751649023235834" height="1167" width="600" frameborder="0"
+    scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=18929260941174268" height="1167" width="600" frameborder="0"
+    scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=144607838031741028" height="1167" width="600"
+    frameborder="0" scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=144607838031741028" height="1167" width="600"
+    frameborder="0" scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=7036943162457783" height="1167" width="600" frameborder="0"
+    scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=8585055536257216" height="1167" width="600" frameborder="0"
+    scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=38562140559223219" height="1167" width="600" frameborder="0"
+    scrolling="no"></iframe>
+
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=914862420335373" height="1167" width="600" frameborder="0"
+    scrolling="no"></iframe> -->

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | PrimeHomes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap-utilities.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🏠 PrimeHomes</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="properties-sale.html">Properties</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+  <!-- CONTACT HERO -->
+  <section class="contact-hero text-white text-center d-flex align-items-center">
+    <div class="container">
+      <h1 class="fw-bold display-5">Contact Us</h1>
+      <p class="lead mt-3">
+        Book an inspection or ask us anything about our properties
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+          <!-- CONTACT INFO -->
+          <!-- <div class="text-center mb-4">
+          <h3 class="fw-bold">Get in Touch</h3>
+          <p class="text-muted">
+            Fill the form below and we’ll respond immediately on WhatsApp.
+          </p>
+        </div> -->
+          <div class="get-in-touch-box text-center mb-5 p-4">
+            <!-- <div class="icon-circle mx-auto mb-3">
+              📞
+            </div> -->
+
+            <h2 class="fw-bold mb-2">Get in Touch</h2>
+
+            <p class="text-muted mb-0">
+              Have questions or want to book a property inspection?
+              Fill the form below and our team will respond instantly on WhatsApp.
+            </p>
+          </div>
+
+          <!-- FORM -->
+          <!-- <form onsubmit="sendToWhatsApp(); return false;" class="bg-light p-4 rounded shadow">
+
+            <div class="mb-3">
+              <label class="form-label">Property</label>
+              <input type="text" id="property" class="form-control" readonly>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea id="message" class="form-control" rows="4"
+                placeholder="I am interested in this property..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100 btn-lg">
+              Send via WhatsApp
+            </button>
+
+          </form> -->
+          <form onsubmit="sendToWhatsApp(); return false;" class="contact-form shadow">
+
+            <div class="mb-3">
+              <label class="form-label">Property</label>
+              <input type="text" id="property" class="form-control form-control-lg" readonly>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="name" class="form-control form-control-lg" placeholder="Enter your full name"
+                required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" id="phone" class="form-control form-control-lg " placeholder="e.g. 08012345678" required>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label">Message</label>
+              <textarea id="message" class="form-control form-control-lg" rows="4"
+                placeholder="I am interested in this property and would like to book an inspection..."></textarea>
+            </div>
+
+            <button type="submit"  class="btn whatsapp-btn w-100 py-3">
+              <a href="https://wa.link/ewyukx">💬 Send via WhatsApp</a>
+              
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-1 fw-bold">PrimeHomes Real Estate</p>
+    <p class="mb-1">📍 Lagos, Nigeria</p>
+    <p class="mb-1">📞 +234 8138487256</p>
+    <p class="mb-0">© 2025 PrimeHomes. All Rights Reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Script -->
+  <script>
+    function sendToWhatsApp() {
+      var property = document.getElementById("property").value;
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var message = document.getElementById("message").value;
+
+      var whatsappNumber = "2348138487256"; // CHANGE THIS
+
+      var text =
+        "BOOK INSPECTION REQUEST\n" +
+        "Property: " + property + "\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Message: " + message;
+
+      var url =
+        "https://wa.link/pp42me" + whatsappNumber + "?how can i get more infor about this=" + encodeURIComponent(text);
+
+      window.open(url, "_blank");
+    }
+
+    /* Auto-fill property name */
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("property").value =
+      params.get("property") || "General Inquiry";
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="./bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
